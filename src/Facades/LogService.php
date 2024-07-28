@@ -11,6 +11,6 @@ class LogService extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'log';
+        return 'custom_log_data';
     }
 }

@@ -68,7 +68,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Deniscosmin21\\LogService\\LogServiceServiceProvider"
+                "Deniscosmin21\\LogService\\LogServiceServiceProvider",
+                "Deniscosmin21\\LogService\\FacadeServiceProvider"
             ],
             "aliases": {
                 "LogData": "Deniscosmin21\\LogService\\Facades\\LogService"

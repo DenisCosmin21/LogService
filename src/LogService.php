@@ -17,7 +17,7 @@ class LogService
 
     
 
-    private function set_source(Request | string $request) 
+    public function set_source(Request | string $request) 
     {
         if(gettype($request) == 'string'){
             $this->source = $request;

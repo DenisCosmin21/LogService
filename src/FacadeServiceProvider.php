@@ -9,7 +9,7 @@ class FacadeServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->bind('log', function($app) {
+        $this->app->singleton('custom_log_data', function($app) {
             return new LogService();
         });
         AliasLoader::getInstance()->alias('LogData', \Deniscosmin21\LogService\Facades\LogService::class);
