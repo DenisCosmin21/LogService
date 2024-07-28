@@ -22,8 +22,8 @@ class LogServiceServiceProvider extends PackageServiceProvider
             ->name('logservice')
             ->hasConfigFile()
             ->hasViews()
-            ->publishesServiceProvider('FacadeServiceProvider')
             ->hasMigration('create_logservice_table')
+            ->publishesServiceProvider('FacadeServiceProvider')
             ->hasInstallCommand(function(InstallCommand $command) {
                 $command->copyAndRegisterServiceProviderInApp();
             });

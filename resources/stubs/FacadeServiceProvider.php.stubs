@@ -1,5 +1,5 @@
 <?php
-namespace Deniscosmin21\LogService\Providers;
+namespace Deniscosmin21\LogService;
 
 use Illuminate\Support\ServiceProvider;
 use Deniscosmin21\LogService\LogService;
