@@ -1,5 +1,6 @@
 {
     "name": "deniscosmin/logservice",
+    "version" : "1.0.1",
     "description": "A package to log data to server",
     "keywords": [
         "deniscosmin21",
