@@ -9,6 +9,6 @@ class ApiRequest
     public static function send($data)
     {
         
-        return Http::asForm()->withBasicAuth(env('API_CREDENTIALS_USER'), env('API_CREDENTIALS_PASSWORD'))->post('http://localhost/log_service/public/api/send_log', $data)->json();
+        return Http::asForm()->withBasicAuth(env('API_CREDENTIALS_USER'), env('API_CREDENTIALS_PASSWORD'))->post('http://log_service/api/send_log', $data)->json();
     }
 }
