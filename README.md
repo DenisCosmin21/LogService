@@ -63,35 +63,41 @@ use LogData;
 LogData::set_source($request)->set_data('my log', 'info')->email(['test@gmail.com', 'test2@gmail.com'])->phone('07....')->send();
 ```
 The methods available :
+1.
 ```php
 set_source(Request | string);
 ```
-(sets the source of the log for example logs.mezoni.ro)
+sets the source of the log for example logs.mezoni.ro
 
+2.
 ```php
 set_data(string $details, string $type = 'info')
 ```
-(sets the details of the log, and maybe the type if you want. Else the type will be info.)
+sets the details of the log, and maybe the type if you want. Else the type will be info.
 
+3.
 ```php
 email(array $email_list)
 ```
-(contains an array of emails to which the log will be sent by email. example ['test1@test.com', 'test2@test.com'])
+contains an array of emails to which the log will be sent by email. example ```php['test1@test.com', 'test2@test.com']```.
 
+4.
 ```php
 sms($phone_number)
 ```
-(sends the log to the phone number by sms)
+sends the log to the phone number by sms
 
+5.
 ```php
 type($type = 'info')
 ```
-(sets the type of the log)
+sets the type of the log
 
+6.
 ```php
 send()
 ```
-(sends the data to the api and returns the response from the api)
+sends the data to the api and returns the response from the api
 
 It can use any order but the last method used should be the send() method.
 ## Testing
