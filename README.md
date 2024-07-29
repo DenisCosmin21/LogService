@@ -50,12 +50,50 @@ php artisan vendor:publish --tag="logservice-views"
 ```
 
 ## Usage
+First option : 
+```php
+use Deniscosmin21\LogService\LogService;
+
+$el = new LogService();
+```
+Second option : 
+```php
+use LogData;
+
+LogData::set_source($request)->set_data('my log', 'info')->email(['test@gmail.com', 'test2@gmail.com'])->phone('07....')->send();
+```
+The methods available :
+```php
+set_source(Request | string);
+```
+(sets the source of the log for example logs.mezoni.ro)
 
 ```php
-$logService = new Deniscosmin21\LogService();
-echo $logService->echoPhrase('Hello, Deniscosmin21!');
+set_data(string $details, string $type = 'info')
 ```
+(sets the details of the log, and maybe the type if you want. Else the type will be info.)
 
+```php
+email(array $email_list)
+```
+(contains an array of emails to which the log will be sent by email. example ['test1@test.com', 'test2@test.com'])
+
+```php
+sms($phone_number)
+```
+(sends the log to the phone number by sms)
+
+```php
+type($type = 'info')
+```
+(sets the type of the log)
+
+```php
+send()
+```
+(sends the data to the api and returns the response from the api)
+
+It can use any order but the last method used should be the send() method.
 ## Testing
 
 ```bash
